@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Expander",
+  "version": "1.0",
+  "description": "Expands short prompts into detailed ones for use with large language models.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
