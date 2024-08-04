@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Prompt Expander</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Expander</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <h1>Prompt Expander</h1>
-  <textarea id="shortPrompt" placeholder="Enter your short prompt here"></textarea>
-  <button id="expandButton">Expand Prompt</button>
-  <div id="result"></div>
-  <script src="popup.js"></script>
+    <div class="container">
+        <h1>Prompt Expander</h1>
+        <textarea id="shortPrompt" placeholder="Enter your short prompt here..."></textarea>
+        <button id="expandButton">Expand Prompt</button>
+        <div id="loadingIndicator" class="hidden">Expanding...</div>
+        <div id="expandedPromptContainer" class="hidden">
+            <h2>Expanded Prompt:</h2>
+            <p id="expandedPrompt"></p>
+            <button id="copyButton">Copy to Clipboard</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
 </body>
 </html>
