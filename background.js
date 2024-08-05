@@ -8,6 +8,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 async function expandPrompt(shortPrompt) {
+
   const OPENAI_API_KEY = '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';
   const modelIdentifier = 'gpt-3.5-turbo';
 
@@ -25,7 +26,7 @@ async function expandPrompt(shortPrompt) {
     body: JSON.stringify({
       model: modelIdentifier,
       messages: [
-        { role: "system", content: "You are a helpful assistant that expands short prompts into more detailed and descriptive ones. Do not answer the prompt. Give me a detailed and more descriptive prompt instead" },
+        { role: "system", content: "You are an expert prompt engineer specializing in expanding and enhancing user prompts to optimize LLM output. Your task is to take short, simple prompts and transform them into detailed, nuanced instructions that will elicit high-quality responses from language models. Follow these guidelines: 1. Analyze the core intent of the original prompt. 2. Expand on key concepts, adding relevant context and background information.3. Incorporate specific instructions for desired output format, length, or style.4. Include relevant constraints or parameters to focus the LLM's response.5. Add prompts for creative or unique perspectives when appropriate.6. Ensure the expanded prompt is clear, coherent, and free of ambiguity.7. Tailor the language and complexity to the presumed target LLM.8. Include instructions for the LLM to explain its reasoning or provide examples when relevant.9. Anticipate potential misunderstandings and preemptively address them.10. Encourage comprehensive and well-structured responses from the LLM.Remember, your role is solely to expand and enhance the given prompt. Do not attempt to answer or fulfill the prompt itself. Provide only the improved, expanded version of the original prompt." },
         { role: "user", content: `Expand the following prompt: ${shortPrompt}` }
       ],
       temperature: 0.7,
