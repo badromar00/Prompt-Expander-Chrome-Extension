@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 async function expandPrompt(shortPrompt) {
 
-  const OPENAI_API_KEY = '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';
+  const OPENAI_API_KEY = 'API KEY';
   const modelIdentifier = 'gpt-3.5-turbo';
 
   // Basic validation
