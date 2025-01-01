@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Expander</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prompt Expander</h1>
+        <textarea id="shortPrompt" placeholder="Enter your short prompt here..."></textarea>
+        
+        
+        <div class="word-count-options">
+            <div class="word-count-option">
+              <input type="radio" id="50words" name="wordCount" value="50">
+              <label for="50words">50 words</label>
+            </div>
+            <div class="word-count-option">
+              <input type="radio" id="100words" name="wordCount" value="100" checked>
+              <label for="100words">100 words</label>
+            </div>
+            <div class="word-count-option">
+              <input type="radio" id="150words" name="wordCount" value="150">
+              <label for="150words">150 words</label>
+            </div>
+          </div>
+
+        <button id="expandButton">Expand Prompt</button>
+        <div id="loadingIndicator" class="hidden">Expanding...</div>
+        <div id="expandedPromptContainer" class="hidden">
+            <h2>Expanded Prompt:</h2>
+            <p id="expandedPrompt"></p>
+            <div class="button-container">
+                <button id="copyButton">Copy to Clipboard</button>
+            </div>
+        </div>
+        <div id="previousPromptsContainer">
+            <h2>Previous Prompts</h2>
+            <ul id="previousPromptsList"></ul>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
